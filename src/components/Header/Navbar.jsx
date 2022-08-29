@@ -1,8 +1,10 @@
-import React from 'react';
+import React ,{useContext}from 'react';
 import {Link} from 'react-router-dom';
-
+import {StateContext} from '../context/ContextProfil';
 
 const Navbar = () => {
+    const {profile,setProfile}=useContext(StateContext)
+    console.log(profile);
     return (
         <nav className='flex justify-between items-center bg-gray-900 w-full h-20 shadow-2xl z-1 '>
             <div className='flex font-bold text-2xl ml-3'>
@@ -14,8 +16,12 @@ const Navbar = () => {
                     <li>Accueil</li>
                     <li>Connexion</li>
                     <li>Apropos</li>
-                    <li></li>
+                    <li>Deconnexion</li>
                 </ul>
+               
+            </div>
+            <div>
+                
             </div>
         </nav>
     );
