@@ -3,6 +3,8 @@ import Navbar from '../Header/Navbar';
 import {StateContext} from '../context/ContextProfil';
 import Sidbar from '../Sidebar/Sidbar';
 
+
+
 const Leading = () => {
     const {profile,setProfile}=useContext(StateContext)
     const activeLink ="flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
@@ -11,8 +13,10 @@ const Leading = () => {
     return (
         <>
             <Navbar/>
-            <div className=''>
+            <div className='flex justify-between'>
                <Sidbar/>
+               <div>Principale</div>
+               
             </div>
         </>
         

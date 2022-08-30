@@ -1,25 +1,24 @@
 import React ,{useContext}from 'react';
 import {Link} from 'react-router-dom';
 import {StateContext} from '../context/ContextProfil';
+import {AiOutlineSearch} from 'react-icons/ai'
 
 const Navbar = () => {
     const {profile,setProfile}=useContext(StateContext)
-    console.log(profile);
+    
     return (
-        <nav className='flex justify-between items-center bg-primary w-full h-20 shadow-2xl z-1 border-b-2 border-ColorText'>
+        <nav className='fixed z-10 flex justify-between items-center bg-primary w-full h-20 shadow-2xl z-1 border-b-2 border-ColorText'>
             <div className='flex font-bold text-2xl ml-3'>
                 <span className='text-white'>SKB-</span>
                 <span className='text-green-500'>MUSIC</span>
             </div>
-            <div className='flex  mr-3'>
-                <ul className='text-white flex justify-end gap-5 text-xl '>
-                    <li>Accueil</li>
-                    <li>Connexion</li>
-                    <li>Apropos</li>
-                    <li>Deconnexion</li>
-                </ul>
-               
-            </div>
+            
+                <div className='w-[40%] flex bg-gray-100 rounded-full '>
+                    <AiOutlineSearch size={50} className="text-gray-300 mt-1 rounded-full "/>
+                    <input type="text" className='w-full h-15 bg-inherit outline-none mt-1 rounded-full text-left text-2xl'/>
+                    
+                </div>
+            
             <div>
                 
             </div>
