@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#on exclut l'envoi du fichier idspotify
+.idspotify

@@ -4,7 +4,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Leading from './components/Leading/Leading';
 import Error from './components/Error/Error';
-
+import Accueil from './components/Header/Accueil';
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
       <Routes>
           <Route path='/' element={<Login/>}/>
           <Route path='/Leading' element={<Leading/>}/>
+          <Route path='/Accueil' element={<Accueil/>}/>
           <Route path='*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>
