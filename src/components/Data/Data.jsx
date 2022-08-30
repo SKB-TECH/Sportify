@@ -3,8 +3,7 @@ import {BiUser} from 'react-icons/bi'
 import {BsJournalAlbum,BsMusicNoteList} from 'react-icons/bs'
 import {FaMusic} from 'react-icons/fa'
 
-const Menu=(
-        {
+export const menu=[{
           name: 'Menu',
           icon: <AiOutlineBars />,
         },
@@ -24,6 +23,5 @@ const Menu=(
         {
           name: 'PlayList',
           icon: <BsMusicNoteList />,
-        })
-
-export default Menu;
+        }
+]
