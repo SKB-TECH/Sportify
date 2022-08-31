@@ -20,7 +20,7 @@ const Sidbar = () => {
             />
 
             {menu.map((item, index) => (
-                        <div className="flex gap-2  ml-5 rounded mt-10">
+                        <div className="flex gap-2  ml-5 rounded mt-10 space-x-2">
                         {<span className={`text-5xl text-gray-200 ${open &&"rotate-[360deg]"}`}>{item.icon}</span>}
                         <button className={`text-ColorText text-2xl font-semibold ${!open && "scale-0 duration-300"}`}>{item.name}</button>
                         </div>

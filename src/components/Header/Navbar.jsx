@@ -14,7 +14,7 @@ const Navbar = () => {
             </div>
             
                 <div className='w-[40%] flex bg-gray-100 rounded-full '>
-                    <AiOutlineSearch size={50} className="text-gray-300 mt-1 rounded-full "/>
+                    <AiOutlineSearch size={40} className="text-gray-500 mt-1 rounded-full "/>
                     <input type="text" className='w-full h-15 bg-inherit outline-none mt-1 rounded-full text-left text-2xl'/>
                     
                 </div>
