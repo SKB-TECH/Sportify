@@ -15,7 +15,7 @@ export const StateContextProvider=({children})=>{
     const [tache,setTache]=useState(action)
     const [screensize,setScreensize]=useState('undefinid')
     const [profile,setProfile]=useState({})
-    const [music,setMusics]=useState({})
+    const [music,setMusics]=
     // const handlClick=(checked)=>{
     //     setIsCliked({...InitialState,[checked]:true})
     // setIsCliked, iscliked,
@@ -25,8 +25,8 @@ export const StateContextProvider=({children})=>{
         <StateContext.Provider value={
             {activeMenu
             ,setActiveMenu,
-            music,
-            setMusics,
+           
+            
             screensize,
             setScreensize,
             profile,setProfile

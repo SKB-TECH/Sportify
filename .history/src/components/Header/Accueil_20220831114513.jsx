@@ -29,7 +29,7 @@ const Accueil = () => {
             window.localStorage.setItem("token", token)
         }
         setToken(token)
-        
+
       }, [])
       
     return (
@@ -48,7 +48,7 @@ const Accueil = () => {
                     </div>
                     
                     <div>
-                    <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`} className={btnStyle}>
+                    
                         Login to Spotify</a>
                     </div>
                 </div>

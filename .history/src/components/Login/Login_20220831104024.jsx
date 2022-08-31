@@ -44,6 +44,13 @@ const Login = () => {
         setStatut(false);
     };
 
+    //les identites pour la connexion de spotify
+
+
+
+
+
+    
     return (
         
             statut ? (<Accueil/>):

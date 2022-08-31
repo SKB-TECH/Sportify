@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import Leading from '../Leading/Leading';
 import {StateContext} from '../context/ContextProfil';
 import { useContext } from 'react';
-import Accueil from '../Header/Accueil';
 
 
 const Login = () => {
@@ -43,10 +42,10 @@ const Login = () => {
     const logOut = () => {
         setStatut(false);
     };
-
+    
     return (
         
-            statut ? (<Accueil/>):
+            statut ? (<Accuei/>):
             
             (<div className='flex justify-center items-center mt-10'>
             <form className="bg-white w-[30%] mr-10  shadow-lg p-10 rounded-lg gap-4 mb-2 flex flex-col justify-between  items-center">

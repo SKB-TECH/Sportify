@@ -29,7 +29,7 @@ const Accueil = () => {
             window.localStorage.setItem("token", token)
         }
         setToken(token)
-        
+        console.log(token)
       }, [])
       
     return (

@@ -25,8 +25,7 @@ export const StateContextProvider=({children})=>{
         <StateContext.Provider value={
             {activeMenu
             ,setActiveMenu,
-            music,
-            setMusics,
+            music,setMusics,
             screensize,
             setScreensize,
             profile,setProfile
