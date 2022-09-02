@@ -8,8 +8,7 @@ import StateContextProvider from './components/context/ContextProfil'
 ReactDOM.render(
       <StateContextProvider>
           <App />
-      </StateContextProvider>,
-      document.getElementById('root')
+      </StateContextProvider>
 )
 
     

@@ -11,10 +11,7 @@ const Leading = () => {
         const normalLink ="flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
         const {tokens,setTokens,music,setMusics}=useContext(StateContext)
         const [searchKey, setSearchKey] = useState("fally ipupa")
-        const [type,setType]=useState("track,album,artist")
-        const [chansons,setChansons] = useState([])
-
-
+        const [type,setType]=useState("track,")
 
         const recherche=(e)=>{
             setSearchKey(e.target.value)
@@ -41,12 +38,13 @@ const Leading = () => {
         useEffect(() => {
             setTokens(window.localStorage.getItem('token'))
             searchTracks().then(data => {
-                setMusics(data); 
-                setChansons(data.tracks)
-                console.log(chansons)
+                setMusics(data.tracks.items); 
+                
             });
             
+            
         },[])
+
         return (
             <>
                 <Navbar valeur={recherche}/>
@@ -56,14 +54,12 @@ const Leading = () => {
                 </div>
                 
                  <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 '> 
-                  
-                    {/* { 
-                       
-                        chansons.map((items,index)=>(
-                        <Card />
-                        
-                    )) 
-                } */}
+                    {
+                        music.map((items,index)=>(
+                        // <Card />
+                        console.log(items)
+                    ))
+                }
                
                 </div> 
                 

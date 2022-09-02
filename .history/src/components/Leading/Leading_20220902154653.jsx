@@ -59,11 +59,11 @@ const Leading = () => {
                   
                     {/* { 
                        
-                        chansons.map((items,index)=>(
-                        <Card />
+                    //     chansons.map((items,index)=>(
+                    //     <Card />
                         
-                    )) 
-                } */}
+                    // ))  */}
+                }
                
                 </div> 
                 

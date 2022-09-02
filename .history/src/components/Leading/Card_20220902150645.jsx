@@ -4,11 +4,10 @@ import{AiFillPlayCircle} from 'react-icons/ai'
 import {FcLike} from 'react-icons/fc'
 
 
-const Card = ({icon,index,photo,}) => {
+const Card = ({icon,index,}) => {
 return ( <div  className='bg-gray-300 w-[20%] rounded h-60 shadow-2xl ml-5 overflow-hidden mt-5 p-3 hover:'> 
 
 <span className='text-xl'>Album</span> 
-
     <p className='flex gap-2'>
         <AiOutlineLike size={25}/>
         <span className='text-gray-600 textxl'></span>

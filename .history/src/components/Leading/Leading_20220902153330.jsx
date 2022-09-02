@@ -12,9 +12,6 @@ const Leading = () => {
         const {tokens,setTokens,music,setMusics}=useContext(StateContext)
         const [searchKey, setSearchKey] = useState("fally ipupa")
         const [type,setType]=useState("track,album,artist")
-        const [chansons,setChansons] = useState([])
-
-
 
         const recherche=(e)=>{
             setSearchKey(e.target.value)
@@ -42,11 +39,16 @@ const Leading = () => {
             setTokens(window.localStorage.getItem('token'))
             searchTracks().then(data => {
                 setMusics(data); 
-                setChansons(data.tracks)
-                console.log(chansons)
+                console.log(data);
             });
             
         },[])
+
+        useEffect(()=>{
+            
+                const {chansons}=music
+              
+        })
         return (
             <>
                 <Navbar valeur={recherche}/>
@@ -57,13 +59,13 @@ const Leading = () => {
                 
                  <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 '> 
                   
-                    {/* { 
+                    {
                        
                         chansons.map((items,index)=>(
                         <Card />
                         
-                    )) 
-                } */}
+                    ))
+                }
                
                 </div> 
                 

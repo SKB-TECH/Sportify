@@ -9,7 +9,7 @@ ReactDOM.render(
       <StateContextProvider>
           <App />
       </StateContextProvider>,
-      document.getElementById('root')
+      docuemt.getBy
 )
 
     

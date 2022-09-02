@@ -43,7 +43,7 @@ const Leading = () => {
             searchTracks().then(data => {
                 setMusics(data); 
                 setChansons(data.tracks)
-                console.log(chansons)
+                console.log()
             });
             
         },[])
@@ -57,13 +57,13 @@ const Leading = () => {
                 
                  <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 '> 
                   
-                    {/* { 
+                    {
                        
                         chansons.map((items,index)=>(
                         <Card />
                         
-                    )) 
-                } */}
+                    ))
+                }
                
                 </div> 
                 
