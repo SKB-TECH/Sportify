@@ -74,7 +74,7 @@ const Leading = () => {
                                 
                             </p>
                             <div className='w-[100%] z-10 top-[-100px] h-56  relative opacity-0  hover:opacity-100 hover:top-[-190px] transition-all delay-150 ' >
-                                <AiFillPlayCircle size={70} className='absolute top-36 left-48 text-gray-900' />
+                                <AiFillPlayCircle size={70} className='absolute top-36 left-48 text-gr-400' />
                                </div>
                             
                             

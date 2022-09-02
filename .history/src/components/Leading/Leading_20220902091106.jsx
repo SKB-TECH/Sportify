@@ -3,7 +3,7 @@ import Navbar from '../Header/Navbar';
 import {StateContext} from '../context/ContextProfil';
 import Sidbar from '../Sidebar/Sidbar';
 import{AiOutlineLike} from 'react-icons/ai'
-import{AiFillPlayCircle} from 'react-icons/ai'
+
 
 const Leading = () => {
 
@@ -61,23 +61,16 @@ const Leading = () => {
                <Sidbar valeur={Type}/>
                </div>
                
-               <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 '> 
+               <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5'> 
                 {
                    music.map((item,index)=>(
-                    
-                    <div key={index} className='bg-gray-300 w-[20%] rounded h-60 shadow-2xl ml-5 overflow-hidden mt-5 p-3 hover:'> 
+                    <div key={index} className='bg-gray-200 w-[20%] rounded shadow-2xl ml-5 overflow-hidden mt-5 p-3'> 
                          <img src={item.images[1]?.url} alt="" className='w-full h-32 object-cover text-sm' style={{fontSize:"20px"}}/>
                          <span className='text-xl'>{item.name} </span> 
                             <p className='flex gap-2'>
-                                <AiOutlineLike size={25}/>
-                                <span className='text-gray-600 textxl'>{item.followers.total}</span>
-                                
+                                <FcLike className='mt-1'/>
+                                <span className='text-gray-600'>{item.followers.total}</span>
                             </p>
-                            <div className='w-[100%] z-10 top-[-100px] h-56  relative opacity-0  hover:opacity-100 hover:top-[-190px] transition-all delay-150 ' >
-                                <AiFillPlayCircle size={70} className='absolute top-36 left-48 text-gray-900' />
-                               </div>
-                            
-                            
                     </div>
                    ))
                 }
