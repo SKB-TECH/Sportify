@@ -64,9 +64,9 @@ const Leading = () => {
                <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5'> 
                 {
                    music.map((item,index)=>(
-                    <div key={index} className='bg-gray-200 w-[15%] rounded shadow-2xl ml-5 overflow-hidden mt-5 p-3'> 
+                    <div key={index} className='bg-gray-200 w-[15%] rounded shadow-2xl ml-5 overflow-hidden mt-5 '> 
                          <img src={item.images[1]?.url} alt="" className='w-full h-32 object-cover text-sm' style={{fontSize:"20px"}}/>
-                         <span className='text-xl'>{item.name} </span> 
+                         <span>{item.name} </span> 
                     </div>
                    ))
                 }

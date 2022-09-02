@@ -61,12 +61,12 @@ const Leading = () => {
                <Sidbar valeur={Type}/>
                </div>
                
-               <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5'> 
+               <div className='flex ml-80 mt-20 flex-wrap w-15 h-10 gap-5 '> 
                 {
                    music.map((item,index)=>(
-                    <div key={index} className='bg-gray-200 w-[15%] rounded shadow-2xl ml-5 overflow-hidden mt-5 p-3'> 
-                         <img src={item.images[1]?.url} alt="" className='w-full h-32 object-cover text-sm' style={{fontSize:"20px"}}/>
-                         <span className='text-xl'>{item.name} </span> 
+                    <div key={index} className='bg-gray-200 rounded-lg shadow-2xl ml-5'> 
+                         <img src={item.images[1]?.url} alt="" className='rounded-full text-sm' style={{fontSize:}}/>
+                         <span>{item.name} </span> 
                     </div>
                    ))
                 }

@@ -3,6 +3,7 @@ import {Link, Navigate} from 'react-router-dom';
 import {AiOutlineSearch} from 'react-icons/ai'
 import {MdLogout} from 'react-icons/md'
 import {StateContext} from '../context/ContextProfil';
+import { GoogleLogout } from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 import {SiMusicbrainz} from 'react-icons/si'
 
@@ -24,7 +25,7 @@ const Navbar = ({search,valeur}) => {
                 </div>
                     <div className='w-[40%] flex bg-gray-100 rounded-full '>
                         <AiOutlineSearch size={40} className="text-gray-500 mt-1 rounded-full " onClick={search} />
-                        <input type="text" className='w-full h-15 bg-inherit outline-none mt-1 rounded-full text-left text-2xl shadow-2xl' onChange={valeur}/>
+                        <input type="text" className='w-full h-15 bg-inherit outline-none mt-1 rounded-full text-left text-2xl' onChange={valeur}/>
                     </div>
                 <div>
             </div>

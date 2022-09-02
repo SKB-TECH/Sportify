@@ -65,7 +65,7 @@ const Leading = () => {
                 {
                    music.map((item,index)=>(
                     <div key={index} className='bg-gray-200 w-[15%] rounded shadow-2xl ml-5 overflow-hidden mt-5 p-3'> 
-                         <img src={item.images[1]?.url} alt="" className='w-full h-32 object-cover text-sm' style={{fontSize:"20px"}}/>
+                         <img src={item.images[1]?.url} alt="" className='w-full h-32 object-cover text-sm relative hover:bg-gray-900 hover:opacity-10' style={{fontSize:"20px"}}/>
                          <span className='text-xl'>{item.name} </span> 
                     </div>
                    ))
