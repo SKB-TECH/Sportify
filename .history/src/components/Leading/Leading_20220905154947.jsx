@@ -38,7 +38,7 @@ const Leading = () => {
             searchTracks().then(data => {
                 setMusics(data); 
 
-                console.log(data) 
+                console.log(categori) 
 
                 switch(categori){
                     case 'artists':
@@ -77,9 +77,9 @@ const Leading = () => {
                            
                                 <Card key={index} artist={item.name}
                                     url={item.href}
-                                    icon={(item.images ? item.images[0].url:null)||(
+                                    icon={(item.images ? item.images[0].url:null):(
                                         (item.album.images ? item.album.images[2].url:null)
-                                    )}
+                                    }
                                     index={index}
                                 />
                         ))

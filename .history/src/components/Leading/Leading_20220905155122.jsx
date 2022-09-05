@@ -38,7 +38,7 @@ const Leading = () => {
             searchTracks().then(data => {
                 setMusics(data); 
 
-                console.log(data) 
+                console.log(categori) 
 
                 switch(categori){
                     case 'artists':
