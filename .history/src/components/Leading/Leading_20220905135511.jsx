@@ -23,7 +23,7 @@ const Leading = () => {
             setCategori(e.target.value)
          }
 
-           
+        console.log(categori)        
 
         async function searchTracks(){
             const response =  await   fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=${type}`,
@@ -38,7 +38,7 @@ const Leading = () => {
             searchTracks().then(data => {
                 setMusics(data); 
 
-                console.log(data)    
+
                 switch(categori){
                     case 'artists':
                         setChansons(data.artists.items)
@@ -75,9 +75,7 @@ const Leading = () => {
                         chansons.map((item,index)=>(
                                 <Card key={index} artist={item.name}
                                     url={item.href}
-                                    
-                                    
-                                    icon={categori==="albums"?(item.images[2].url):(item.album.images[1].url)}
+                                    icon={item.album.images[1].url}
                                     index={index}
                                 />
                             ))

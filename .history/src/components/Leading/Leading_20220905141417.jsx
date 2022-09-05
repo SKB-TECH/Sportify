@@ -77,7 +77,7 @@ const Leading = () => {
                                     url={item.href}
                                     
                                     
-                                    icon={categori==="albums"?(item.images[2].url):(item.album.images[1].url)}
+                                   icon={categori==="albums"?(item.images[2].url):(item.album.images[1].url)}
                                     index={index}
                                 />
                             ))

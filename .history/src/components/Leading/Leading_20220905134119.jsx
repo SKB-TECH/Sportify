@@ -23,7 +23,7 @@ const Leading = () => {
             setCategori(e.target.value)
          }
 
-           
+        console.log(categori)        
 
         async function searchTracks(){
             const response =  await   fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=${type}`,
@@ -38,22 +38,11 @@ const Leading = () => {
             searchTracks().then(data => {
                 setMusics(data); 
 
-                console.log(data)    
+
                 switch(categori){
                     case 'artists':
-                        setChansons(data.artists.items)
-                    break
-
-                    case 'albums':
-                        setChansons(data.albums.items)
-                    break
-                    
-                    case 'tracks':
                         setChansons(data.tracks.items)
                     break
-
-                  //  default setChansons(data.tracks.items)
-    
                 }
                 
             });
@@ -72,15 +61,15 @@ const Leading = () => {
                  <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 '> 
                     
                     {
-                        chansons.map((item,index)=>(
+                        chansons.map((items)=>(
+                        
+                            items.artists.map((item,index)=>(
                                 <Card key={index} artist={item.name}
                                     url={item.href}
-                                    
-                                    
-                                    icon={categori==="albums"?(item.images[2].url):(item.album.images[1].url)}
+                                    icon={items.album.images[1].url}
                                     index={index}
                                 />
-                            ))
+                            ))))
                     } 
                 </div> 
                 </div>

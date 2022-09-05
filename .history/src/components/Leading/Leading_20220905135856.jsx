@@ -38,7 +38,7 @@ const Leading = () => {
             searchTracks().then(data => {
                 setMusics(data); 
 
-                console.log(data)    
+
                 switch(categori){
                     case 'artists':
                         setChansons(data.artists.items)
@@ -77,7 +77,7 @@ const Leading = () => {
                                     url={item.href}
                                     
                                     
-                                    icon={categori==="albums"?(item.images[2].url):(item.album.images[1].url)}
+                                    icon={ categori==="albums"?(item.album.images[1].url):(item.album.images[1].url)}
                                     index={index}
                                 />
                             ))
