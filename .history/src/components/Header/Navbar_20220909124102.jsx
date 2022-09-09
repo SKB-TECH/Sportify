@@ -32,7 +32,7 @@ const Navbar = ({recupereValeur}) => {
             </div>
             <div className='flex gap-2 mr-10'>
                 <MdLogout size={30} className='mt-1 text-gray-100 '/>
-                <button className='hidden text-ColorText text-xl cursor-pointer font-bold hover:scale-105'
+                <button className= text-ColorText text-xl cursor-pointer font-bold hover:scale-105'
                 onClick={logout}
                 >Deconnexion</button>
             </div>

@@ -19,7 +19,7 @@ const Navbar = ({recupereValeur}) => {
         <nav className='fixed sm:fixed z-10 flex justify-between items-center bg-primary w-full h-20 shadow-2xl z-1 border-b-1 border-ColorText'>
             <div className='flex font-bold text-2xl ml-3'>
             <SiMusicbrainz size={50} style={{color:"white"}} className="hidden sm:block"/>
-                <div className="hidden sm:flex">
+                <div className="sm:flex">
                     <span className='text-white mt-1'>SKB-</span>
                     <span className='text-green-500 mt-1'>MUSIC</span>
                 </div>
@@ -32,7 +32,7 @@ const Navbar = ({recupereValeur}) => {
             </div>
             <div className='flex gap-2 mr-10'>
                 <MdLogout size={30} className='mt-1 text-gray-100 '/>
-                <button className='hidden text-ColorText text-xl cursor-pointer font-bold hover:scale-105'
+                <button className='text-ColorText text-xl cursor-pointer font-bold hover:scale-105'
                 onClick={logout}
                 >Deconnexion</button>
             </div>

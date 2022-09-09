@@ -25,7 +25,7 @@ const Sidbar = (categoris) => {
                         <div key={index} className="flex gap-5 ml-5 rounded  space-x-2 shadow-2xl hover:border-b-2 border-gray-200">
                           {
                             <span className={`text-2xl text-gray-200 mt-5 ${open &&"rotate-[360deg] hover:scale-105"}`}>{item.icon}</span>}
-                            <button type="button" onClick={(e)=>setCategori(e.target.textContent)} className={`text-gray-100 text-2xl mt-5 font-semibold ${!open && "scale-0 duration-300"}`}>{item.name}</button>
+                            <button type="button" onClick={(e)=>setCategori(e.target.textContent)} className={`hidden md:text-ColorText text-2xl mt-5 font-semibold ${!open && "scale-0 duration-300"}`}>{item.name}</button>
                         </div>
             ))}
         </div>

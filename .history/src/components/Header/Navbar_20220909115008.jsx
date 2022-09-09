@@ -24,9 +24,9 @@ const Navbar = ({recupereValeur}) => {
                     <span className='text-green-500 mt-1'>MUSIC</span>
                 </div>
                 </div>
-                    <div className='flex gap-20 justify-between sm:flex w-[60%] bg-gray-100 rounded-full '>
+                    <div className='gap-20 justify-between sm:flex w-[100%] bg-gray-100 rounded-full '>
                         <AiOutlineSearch size={40} className="text-gray-500 mt-1 rounded-full " />
-                        <input type="text" className='w-full h-15 bg-inherit outline-none mt-1 rounded-full text-left text-2xl shadow-2xl' onChange={recupereValeur}/>
+                        <input type="text" className='w-[80%] sm:w-full h-15 bg-inherit outline-none mt-1 rounded-full text-left text-2xl shadow-2xl' onChange={recupereValeur}/>
                     </div>
                 <div>
             </div>

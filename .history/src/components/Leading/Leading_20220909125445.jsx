@@ -68,30 +68,30 @@ const Leading = () => {
                         <Sidbar categoris={categorisation}/>
                     </div>
                 
-                    <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 ' > 
-                        
-                        {
-                            chansons.map((item,index)=>(
-                                categori ==="albums"|| "tracks" ?(
-
-                                    <Card 
-                                        key={index}
-                                        artist={item.name}
-                                        ids={item.id}
-                                        icon={
-                                            (item.images ? item.images[0].url:null)||(
-                                            (item.album.images ? item.album.images[2].url:null)
-                                        )}
-                                        index={index}
-                                    />
-                            ):(
-
-                                <Card key={index}/> 
-                            ))
-                            )
-                        }
+                 <div className='sm:flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 ' > 
                     
-                    </div> 
+                    {
+                        chansons.map((item,index)=>(
+                             categori ==="albums"|| "tracks" ?(
+
+                                <Card 
+                                    key={index}
+                                    artist={item.name}
+                                    ids={item.id}
+                                    icon={
+                                        (item.images ? item.images[0].url:null)||(
+                                        (item.album.images ? item.album.images[2].url:null)
+                                    )}
+                                    index={index}
+                                />
+                        ):(
+
+                            <Card key={index}/> 
+                        ))
+                        )
+                    }
+                   
+                </div> 
                     
                 </div>
             </>

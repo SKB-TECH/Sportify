@@ -64,7 +64,7 @@ const Leading = () => {
             <>
                 <Navbar recupereValeur={recherche}/>
                 <div className='flex justify-between '>
-                    <div className='fixed'>
+                    <div className='hidden sm:fixed'>
                         <Sidbar categoris={categorisation}/>
                     </div>
                 
