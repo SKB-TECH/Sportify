@@ -5,7 +5,7 @@ const Accueil = () => {
     
     //les identites pour la connexion de spotify
     const CLIENT_ID="4718acf732be4a25aad302598974a92b"
-    const REDIRECT_URI ="https://skbmusic.netlify.app/callback/"
+    const REDIRECT_URI ="https://skbmusic.netlify.app//callback/"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
 
