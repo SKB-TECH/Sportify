@@ -19,7 +19,7 @@ const Card = ({icon,index,photo,ids,artist,album}) => {
     return ( <>
     <div  className='box-content bg-gray-300 w-[20%] z-0 rounded h-80 shadow-2xl ml-5 overflow-hidden mt-5 p-3 relative'> 
         <p className='flex flex-col gap-2'>
-            <img src={`${icon}`} alt='' sizes='30px' onClick={player}/>
+            <img src={`${icon}`} alt='' sizes='30px'/>
             <div className="flex flex-col">
                 <span className='text-gray-900 text-xl font-bold w-full'>{artist}</span>
                 

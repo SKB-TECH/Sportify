@@ -12,6 +12,7 @@ const Sidbar = (categoris) => {
     setOpen(!open)
   }
   
+
   return (
     <div className="flex">
         

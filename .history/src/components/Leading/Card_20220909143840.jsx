@@ -17,9 +17,9 @@ const Card = ({icon,index,photo,ids,artist,album}) => {
         setClose(true)
     }
     return ( <>
-    <div  className='box-content bg-gray-300 w-[20%] z-0 rounded h-80 shadow-2xl ml-5 overflow-hidden mt-5 p-3 relative'> 
+    <div  className='box-content bg-gray-300 w-[20%] rounded h-80 shadow-2xl ml-5 overflow-hidden mt-5 p-3 relative'> 
         <p className='flex flex-col gap-2'>
-            <img src={`${icon}`} alt='' sizes='30px' onClick={player}/>
+            <img src={`${icon}`} alt='' sizes='30px'/>
             <div className="flex flex-col">
                 <span className='text-gray-900 text-xl font-bold w-full'>{artist}</span>
                 
@@ -35,12 +35,13 @@ const Card = ({icon,index,photo,ids,artist,album}) => {
     {
         active && 
         
-        <div style={{ position: 'absolute', bottom: 0, top:370,left:0, zIndex:100}} className="w-[20%] h-80">
-            <button onClick={quit} className="text-gray-100 text-2xl font-bold text-center">X</button>
-            <iframe style={{borderRadius:"12px",position:"fixed"}} 
+        <div style={{ position: 'absolute', bottom: 0, top:0,left:1000, zIndex: 100}} className="w-[20%] h-80">
+            
+            <button onClick={quit} className="text-gray-900 text-2xl font-bold">X</button>
+            <iframe style={{borderRadius:"12px"}} 
             src={`https://open.spotify.com/embed/${categori}/${ids}?utm_source=generator`}
-            width="17%" 
-            height="300" 
+            width="100%" 
+            height="380" 
             frameBorder="0" 
             allowfullscreen="" 
             allow="autoplay; 
