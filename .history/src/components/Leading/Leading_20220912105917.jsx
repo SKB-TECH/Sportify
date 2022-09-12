@@ -35,7 +35,7 @@ const Leading = () => {
             setTokens(window.localStorage.getItem('token'))
             searchTracks().then(data => {
                 setMusics(data); 
-                console.log(data) 
+                // console.log(data) 
                 switch(categori){
                     case 'artist':
                         setChansons(data.artists.items) 
@@ -86,9 +86,8 @@ const Leading = () => {
                                 <Artists 
                                     key={index}
                                     name={item.name}
-                                    followers={item.followers.total}
-                                    ids={item.id}
-                                    
+                                    image={item.image}
+                                
                                 />
                             )
 

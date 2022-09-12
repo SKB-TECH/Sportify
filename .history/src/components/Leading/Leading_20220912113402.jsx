@@ -87,8 +87,7 @@ const Leading = () => {
                                     key={index}
                                     name={item.name}
                                     followers={item.followers.total}
-                                    ids={item.id}
-                                    
+                                    ids={item}
                                 />
                             )
 

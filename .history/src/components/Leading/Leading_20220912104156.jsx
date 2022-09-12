@@ -3,7 +3,7 @@ import Navbar from '../Header/Navbar';
 import {StateContext} from '../context/ContextProfil';
 import Sidbar from '../Sidebar/Sidbar';
 import Card from './Card'
-import Artists from '../Artists/Artists'
+
 
 const Leading = () => {
 
@@ -24,7 +24,7 @@ const Leading = () => {
 
       
         async function searchTracks(){
-            const response =  await   fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=${type}`,
+            const response =  await   fetch(`https://api.spotify.com/v1/search?q=${ categori==="track"||"":searchKey}&type=${type}`,
             {headers: {'Authorization':`Bearer ${tokens}`},"Content-Type":"application/json","method":"GET"
         });
         const data = await response.json();
@@ -35,10 +35,12 @@ const Leading = () => {
             setTokens(window.localStorage.getItem('token'))
             searchTracks().then(data => {
                 setMusics(data); 
-                console.log(data) 
+                // console.log(data) 
                 switch(categori){
                     case 'artist':
-                        setChansons(data.artists.items) 
+                        setChansons(data.artists.items)
+                        console.log(data)
+                        
                     break
 
                     case 'album':
@@ -49,6 +51,7 @@ const Leading = () => {
                         setChansons(data.tracks.items)
                     break
 
+                  //  default setChansons(data.tracks.items)
     
                 }
                 
@@ -76,20 +79,14 @@ const Leading = () => {
                                         artist={item.name}
                                         ids={item.id}
                                         icon={
-                                            (item.images && item.images[1].url)||(
-                                            (item.album.images && item.album.images[1].url)
+                                            (item.images ? item.images[0].url:"")||(
+                                            (item.album.images ? item.album.images[2].url:null)
                                         )}
                                         index={index}
                                     />
                             ):(
                             
-                                <Artists 
-                                    key={index}
-                                    name={item.name}
-                                    followers={item.followers.total}
-                                    ids={item.id}
-                                    
-                                />
+                                <Artists/>
                             )
 
 

@@ -88,7 +88,7 @@ const Leading = () => {
                                     name={item.name}
                                     followers={item.followers.total}
                                     ids={item.id}
-                                    
+                                    image={item.images !=="" ? (item.images[0].url):("")}
                                 />
                             )
 

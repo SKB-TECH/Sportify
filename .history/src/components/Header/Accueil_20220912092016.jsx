@@ -11,6 +11,7 @@ const Accueil = () => {
     const btnStyle='py-2 px-4 bg-green-500 text-white font-semibold rounded-3xl shadow-md mb-4 hover:border-2xl'
 
     return (
+        
             <div className='flex justify-center items-center mt-40'>
                 <div className='w-[30%] bg-gray-900 h-fit flex flex-col gap-10 justify-center items-center rounded-xl shadow-2xl'>
                     

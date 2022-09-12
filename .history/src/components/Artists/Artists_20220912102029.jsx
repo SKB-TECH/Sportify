@@ -27,7 +27,7 @@ const Card = ({icon,index,photo,ids,artist,album}) => {
         </p>
         <div key={index} className='w-[100%] z-10 top-[-250px] h-56  relative opacity-0  hover:opacity-100 hover:top-[-250px] transition-all delay-150 ' >
             {
-                close && <button onClick={player} className='absolute top-36 left-1 text-green-500 z-100' ><AiFillPlayCircle size={70}/></button>
+                close && <button onClick={player} className='absolute top-36 left-48 text-green-500 z-100' ><AiFillPlayCircle size={70}/></button>
             }
         </div>
        
