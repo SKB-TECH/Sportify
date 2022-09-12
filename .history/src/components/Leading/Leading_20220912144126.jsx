@@ -60,17 +60,16 @@ const Leading = () => {
         return (
             <>
                 <Navbar recupereValeur={recherche}/>
-                <div className='flex justify-between'>
+                <div className='flex justify-between '>
                     <div className='fixed'>
                         <Sidbar categoris={categorisation}/>
                     </div>
                 
-                    <div className='flex mt-20 ml-80 flex-wrap w-50 h-10 gap-5 ' > 
+                    <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 ' > 
                         
                         {
                             chansons.map((item,index)=>(
-                                categori !=="artist" ?(
-
+                                categori !=="artist" (
                                     <Card 
                                         key={index}
                                         artist={item.name}
@@ -83,13 +82,18 @@ const Leading = () => {
                                     />
                             ):(
                                 <>
-                                <Artists 
-                                    key={index}
-                                    image={item.images && item.images[1].url}
-                                    name={item.name}
-                                    followers={(item.followers)}
-                                    ids={item.id}
-                                />
+                                    {
+                                        artists.map((items,index)=>{
+                                            <Artists 
+                                                key={index}
+                                                name={items.name}
+                                                followers={items.followers[1]}
+                                                ids={items.id}
+                                                image={ items.images[2].url}
+                                    
+                                            />
+                                        })
+                                    }
                                 </>
                             )
 

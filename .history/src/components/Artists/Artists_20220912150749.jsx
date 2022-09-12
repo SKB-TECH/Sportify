@@ -1,8 +1,8 @@
 import React,{useState,useContext}  from 'react';
 import{AiFillPlayCircle} from 'react-icons/ai'
 import {StateContext} from '../context/ContextProfil';
-
-const Card = ({icon,index,photo,ids,artist,album}) => {
+import {BiLike} from 'react-icons/bi';
+const Artists = ({image,name,followers,ids,index}) => {
     const [active,setActive]=useState(false);
     const [close,setClose]=useState(true);
     const {categori,setCategori}=useContext(StateContext)
@@ -19,13 +19,13 @@ const Card = ({icon,index,photo,ids,artist,album}) => {
     return ( <>
     <div  className='box-content bg-gray-300 w-[20%] z-0 rounded h-80 shadow-2xl ml-5 overflow-hidden mt-5 p-3 relative'> 
         <p className='flex flex-col gap-2'>
-            <img src={`${icon}`} alt='' sizes='30px' onClick={player}/>
+            <img src={`${image}`} alt='' sizes='25px' onClick={player}/>
             <div className="flex flex-col">
-                <span className='text-gray-900 text-xl font-bold w-full'>{artist}</span>
-                
+                <span className='text-gray-900 text-xl font-bold w-full'>{name}</span>
+                <span className='text-red-900 text-xl font-bold w-full flex '><BiLike/>{followers}</span>
             </div>
         </p>
-        <div key={index} className='w-[100%] z-10 top-[-250px] h-56  relative opacity-0  hover:opacity-100 hover:top-[-250px] transition-all delay-150 ' >
+        <div key={index} className='w-[100%] z-10 top-[-200px] h-60  relative opacity-0  hover:opacity-100 hover:top-[-100px] transition-all delay-150 ' >
             {
                 close && <button onClick={player} className='absolute top-36 left-1 text-green-500 z-100' ><AiFillPlayCircle size={70}/></button>
             }
@@ -56,4 +56,4 @@ const Card = ({icon,index,photo,ids,artist,album}) => {
 );
 };
 
-export default Card;
+export default Artists;

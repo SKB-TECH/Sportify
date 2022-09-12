@@ -12,7 +12,7 @@ const Leading = () => {
         const {tokens,setTokens,music,setMusics,categori,setCategori}=useContext(StateContext)
         const [searchKey, setSearchKey] = useState("fally ipupa")
         const [type,setType]=useState("track,album,artist")
-        const [artists,setArtist]=useState([]);
+        
         const [chansons,setChansons] = useState([])
 
         const recherche=(e)=>{
@@ -35,10 +35,10 @@ const Leading = () => {
             setTokens(window.localStorage.getItem('token'))
             searchTracks().then(data => {
                 setMusics(data); 
-                console.log(data) ;
+                console.log(data.artists.items.image) 
                 switch(categori){
                     case 'artist':
-                        setArtist(data.artists.items) 
+                        setChansons(data.artists.items) 
                     break
 
                     case 'album':
@@ -60,12 +60,12 @@ const Leading = () => {
         return (
             <>
                 <Navbar recupereValeur={recherche}/>
-                <div className='flex justify-between'>
+                <div className='flex justify-between '>
                     <div className='fixed'>
                         <Sidbar categoris={categorisation}/>
                     </div>
                 
-                    <div className='flex mt-20 ml-80 flex-wrap w-50 h-10 gap-5 ' > 
+                    <div className='flex ml-80 mt-20 flex-wrap w-50 h-10 gap-5 ' > 
                         
                         {
                             chansons.map((item,index)=>(
@@ -82,15 +82,14 @@ const Leading = () => {
                                         index={index}
                                     />
                             ):(
-                                <>
+                            
                                 <Artists 
                                     key={index}
-                                    image={item.images && item.images[1].url}
                                     name={item.name}
-                                    followers={(item.followers)}
+                                    followers={item.followers.total}
                                     ids={item.id}
+                                    
                                 />
-                                </>
                             )
 
 
