@@ -25,7 +25,7 @@ const Accueil = () => {
                     </div>
                     
                     <div>
-                    <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${Window.location.postname}&response_type=${RESPONSE_TYPE}`} className={btnStyle}>
+                    <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${Window.}&response_type=${RESPONSE_TYPE}`} className={btnStyle}>
                         Login to Spotify</a>
                     </div>
                 </div>
